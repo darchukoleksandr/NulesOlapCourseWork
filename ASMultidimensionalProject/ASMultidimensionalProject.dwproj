@@ -6,10 +6,67 @@
     <Name>ASMultidimensionalProject.database</Name>
     <FullPath>ASMultidimensionalProject.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Data Works DW.cube</Name>
+      <FullPath>Data Works DW.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Data Works DW.partitions</Name>
+          <FullPath>Data Works DW.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Dim Date.dim</Name>
+      <FullPath>Dim Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Employee.dim</Name>
+      <FullPath>Dim Employee.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Promotion.dim</Name>
+      <FullPath>Dim Promotion.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Product.dim</Name>
+      <FullPath>Dim Product.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Data Works DW.ds</Name>
+      <FullPath>Data Works DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Data Works DW.dsv</Name>
+      <FullPath>Data Works DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Data Works DW</Id>
+            <Name>Data Works DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Persist Security Info=True;Password=;User ID=;Initial Catalog=DataWorksDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Data Works DW</Id>
+            <Name>Data Works DW</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
